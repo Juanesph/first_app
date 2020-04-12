@@ -6,10 +6,38 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
   </head>
 
-  <body>
+  <body class="is-preload">
+    <!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+								<!-- Nav -->
+								<nav class="navbar navbar-inverse">
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav class="navbar navbar-inverse" id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><%=link_to "One", pages_one_path%></li>
+							<li><%=link_to "Two", pages_two_path%></li>
+							<li><%=link_to "Three", pages_three_path%></li>
+						</ul>
+					</nav>
+  
     <%= yield %>
-  </body>
+  </body >
+   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>
